@@ -1,0 +1,81 @@
+{
+  "name": "blueprint",
+  "private": false,
+  "version": "1.0.0",
+  "main": "./dist/resources/app/main.cjs",
+  "author": {
+    "name": "differ"
+  },
+  "description": "蓝图图纸管理系统",
+  "scripts": {
+    "start": "chcp 65001 && npm run dev:app",
+    "dev:web": "vite",
+    "dev:app": "node scripts/dev",
+    "build": "npm run build:web && npm run build:app",
+    "build:web": "vite build",
+    "build:app": "node scripts/build",
+    "preview": "vite preview",
+    "lint": "eslint --fix ./src  --ext .vue,.ts",
+    "prettier": "prettier --write '**/*.{ts,js,less,md,json,vue}'",
+    "ncu": "ncu --configFileName .ncurc.json && npm i",
+    "rebuild": "electron-rebuild -t prod,optional,dev",
+    "test": "electron . -enable-webgl --no-sandbox --disable-dev-shm-usage"
+  },
+  "engines": {
+    "node": ">=12"
+  },
+  "keywords": [
+    "蓝图图纸管理系统"
+  ],
+  "license": "MIT",
+  "contributors": [
+    {
+      "name": "differ",
+      "email": "liyuanfangdiffer@gmail.com"
+    }
+  ],
+  "dependencies": {
+    "@ant-design/icons-vue": "^7.0.1",
+    "@types/archiver": "^6.0.2",
+    "@types/bunyan": "^1.8.11",
+    "@types/bunyan-logentries": "^0.1.33",
+    "@types/log4js": "^2.3.5",
+    "@types/winston": "^2.4.4",
+    "ant-design-vue": "^4.0.6",
+    "archiver": "^6.0.1",
+    "axios": "^1.6.1",
+    "crypto-js": "^4.2.0",
+    "dayjs": "^1.11.10",
+    "electron-log": "^5.1.0",
+    "electron-sudo": "^4.0.12",
+    "exec-root": "^1.0.9",
+    "robotjs": "^0.6.0",
+    "sudo-prompt": "^9.2.1",
+    "vue": "^3.3.8",
+    "vue-router": "^4.2.5",
+    "yauzl": "^2.10.0",
+    "yauzl-promise": "^4.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.9.0",
+    "@typescript-eslint/eslint-plugin": "^6.10.0",
+    "@typescript-eslint/parser": "^6.10.0",
+    "@vitejs/plugin-vue": "^4.4.1",
+    "@vscode/sudo-prompt": "^9.3.1",
+    "cross-env": "^7.0.3",
+    "electron": "22.0.0",
+    "electron-builder": "24.4.0",
+    "eslint": "^8.53.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-import": "^2.29.0",
+    "eslint-plugin-prettier": "^5.0.1",
+    "eslint-plugin-vue": "^9.18.1",
+    "less": "^4.2.0",
+    "prettier": "^3.0.3",
+    "typescript": "5.2.2",
+    "vite": "^4.5.0",
+    "vite-plugin-eslint": "^1.8.1",
+    "vue-tsc": "^1.8.22"
+  }
+}

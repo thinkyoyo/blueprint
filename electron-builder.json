@@ -1,0 +1,40 @@
+{
+  "appId": "blueprint",
+  "electronVersion": "22.0.0",
+  "copyright": "Copyright (c) 2024-present differ",
+  "asar": true,
+  "extraResources":  {
+        "from": "./extra/",
+        "to": "extra"
+  },
+  "directories": {
+    "output": "./dist/package"
+  },
+  "win": {
+    "icon": "./app/assets/256x256.ico",
+    "requestedExecutionLevel": "highestAvailable",
+    "target": [
+      {
+        "target": "nsis",
+        "arch": ["x64"]
+      }
+    ]
+  },
+  "nsis": {
+    "allowElevation": true,
+    "allowToChangeInstallationDirectory": true,
+    "artifactName": "blueprint.${ext}",
+    "createDesktopShortcut": true,
+    "createStartMenuShortcut": true,
+    "installerIcon": "./app/assets/256x256.ico",
+    "uninstallerIcon": "./app/assets/256x256.ico",
+    "installerHeaderIcon": "./app/assets/256x256.ico",
+    "uninstallDisplayName": "uninstall",
+    "oneClick": false,
+    "shortcutName": "blueprint",
+    "deleteAppDataOnUninstall": false,
+    "displayLanguageSelector": false,
+    "perMachine": false
+  },
+  "beforePack": "./hooks/beforePack.js"
+}

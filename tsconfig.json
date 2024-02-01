@@ -1,0 +1,33 @@
+{
+  "compilerOptions": {
+    "incremental": false,
+    "composite": false,
+    "target": "esnext",
+    "useDefineForClassFields": true,
+    "module": "esnext",
+
+    "jsx": "preserve",
+    "sourceMap": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "esModuleInterop": true,
+    "lib": ["esnext", "dom"],
+    "types": ["vite/client", "node"],
+    "skipLibCheck": true,
+    "baseUrl": "./",
+
+    /* 路径别名 */
+    "paths": {
+      "@/*": ["./src/*"],
+      "~/*": ["./app/*"]
+    },
+
+    /* 解析方式 */
+    "moduleResolution": "Bundler",
+
+    /* lint */
+    "strict": true
+  },
+  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue", "app/**/*.ts"],
+  "exclude": ["node_modules"]
+}
